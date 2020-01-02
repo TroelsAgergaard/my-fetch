@@ -1,5 +1,5 @@
 {
-  "name": "umd-test",
+  "name": "@thar/fetch-wrapper",
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
@@ -8,8 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "jquery": "^3.4.1"
-  }
+    "jquery": "^3.4.1",
+    "node-fetch": "^2.6.0"
+  },
+  "homepage": "https://github.com/TroelsAgergaard/my-fetch"
 }

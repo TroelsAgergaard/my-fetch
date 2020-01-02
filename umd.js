@@ -27,7 +27,8 @@
 				});
 	
 				return await response.json();
-			} else {
+
+			} else if (typeof XMLHttpRequest === "function") {		
 				let xhttp = new XMLHttpRequest();
 				xhttp.open("GET", this.APIAddress + resource, true);
 				xhttp.send();
@@ -39,6 +40,17 @@
 					};
 				});
 
+			} 
+			else {
+				const nodefetch = require('node-fetch');
+
+				let response = await nodefetch(this.APIAddress + resource, {
+					headers: {
+						"Authorization": this.APIKey
+					}
+				})
+
+				return await response.json();
 			}
 
 		} catch (error) {
